@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomNavigation from './BottomNavigation';
+import Search from '../Screens/Search/Search';
 
 const Stack = createNativeStackNavigator();
 const Navigation = () => {
@@ -15,6 +16,13 @@ const Navigation = () => {
         <Stack.Screen
           name="BottomNavigation"
           component={BottomNavigation}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
           options={{
             headerShown: false,
           }}
