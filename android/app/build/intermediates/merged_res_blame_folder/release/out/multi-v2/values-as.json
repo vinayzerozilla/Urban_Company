@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.urbancompany.app-mergeReleaseResources-33:/values-as/values-as.xml",
+            "outputFile": "com.urbancompany.app-mergeReleaseResources-34:/values-as/values-as.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-3\\dd33cdba76574cd6269c5bd29e434651\\transformed\\material-1.9.0\\res\\values-as\\values-as.xml",

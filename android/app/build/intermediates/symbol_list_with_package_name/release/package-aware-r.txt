@@ -992,6 +992,7 @@ attr roundingBorderColor
 attr roundingBorderPadding
 attr roundingBorderWidth
 attr saturation
+attr scalableType
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -2982,7 +2983,11 @@ drawable notify_panel_notification_icon_bg
 drawable redbox_top_border_background
 drawable rn_edit_text_material
 drawable src_assets_images_dummyimage
+drawable src_assets_images_gift
+drawable src_assets_images_massage
+drawable src_assets_images_native_water_purifier
 drawable src_assets_images_new_launch
+drawable src_assets_images_water_purifier
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3092,8 +3097,12 @@ id buttonPanel
 id cancel_button
 id catalyst_redbox_title
 id center
+id centerBottom
+id centerBottomCrop
 id centerCrop
 id centerInside
+id centerTop
+id centerTopCrop
 id center_horizontal
 id center_vertical
 id chain
@@ -3153,6 +3162,7 @@ id edit_query
 id elastic
 id embed
 id end
+id endInside
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
@@ -3208,7 +3218,13 @@ id labeled
 id labelled_by
 id layout
 id left
+id leftBottom
+id leftBottomCrop
+id leftCenter
+id leftCenterCrop
 id leftToRight
+id leftTop
+id leftTopCrop
 id legacy
 id line1
 id line3
@@ -3316,7 +3332,13 @@ id react_test_id
 id rectangles
 id reverseSawtooth
 id right
+id rightBottom
+id rightBottomCrop
+id rightCenter
+id rightCenterCrop
 id rightToLeft
+id rightTop
+id rightTopCrop
 id right_icon
 id right_side
 id rn_frame_file
@@ -3391,6 +3413,7 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startInside
 id startToEnd
 id startVertical
 id staticLayout
@@ -3665,6 +3688,7 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw src_assets_videos_sample
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -5155,4 +5179,5 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable scaleStyle scalableType
 xml rn_dev_preferences
