@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 const ImageCarousel = () => {
   return (
     <View>
-      <Text>something</Text>
+      <Text style={{fontFamily: 'PlusJakartaSans-Regular'}}>something</Text>
     </View>
   );
 };

@@ -14,7 +14,13 @@ const Two_row_style_services = props => {
               height: 100,
             }}
           />
-          <Text style={{fontSize: 14, color: 'black', paddingTop: 5}}>
+          <Text
+            style={{
+              fontFamily: 'PlusJakartaSans-Regular',
+              fontSize: 14,
+              color: 'black',
+              paddingTop: 5,
+            }}>
             {props.sername}
           </Text>
         </TouchableOpacity>

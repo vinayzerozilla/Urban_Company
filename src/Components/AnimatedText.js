@@ -32,7 +32,9 @@ const AnimatedText = ({texts}) => {
   const currentText = texts[currentTextIndex];
   const displayedText = currentText.substring(0, currentLetterIndex);
 
-  return <Text>{displayedText}</Text>;
+  return (
+    <Text style={{fontFamily: 'PlusJakartaSans-Regular'}}>{displayedText}</Text>
+  );
 };
 
 export default AnimatedText;

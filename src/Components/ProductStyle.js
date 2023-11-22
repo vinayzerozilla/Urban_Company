@@ -15,15 +15,28 @@ const ProductStyle = props => {
             alignItems: 'center',
           }}
         />
-        <Text style={{color: 'black'}}>{props.prodname}</Text>
+        <Text style={{fontFamily: 'PlusJakartaSans-Regular', color: 'black'}}>
+          {props.prodname}
+        </Text>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Entypo name="star" color="black" size={14} />
-          <Text style={{paddingHorizontal: 3}}>{props.ratings}</Text>
+          <Text
+            style={{
+              fontFamily: 'PlusJakartaSans-Regular',
+              paddingHorizontal: 3,
+            }}>
+            {props.ratings}
+          </Text>
           <Text>({props.revqty})</Text>
         </View>
         <View style={{flexDirection: 'row'}}>
           <Text>₹{props.price}</Text>
-          <Text style={{textDecorationLine: 'line-through', paddingLeft: 3}}>
+          <Text
+            style={{
+              fontFamily: 'PlusJakartaSans-Regular',
+              textDecorationLine: 'line-through',
+              paddingLeft: 3,
+            }}>
             {props.strikedprice}
           </Text>
         </View>

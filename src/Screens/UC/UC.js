@@ -23,7 +23,7 @@ import ImageCarousel from '../../Components/ImageCarousel';
 import PlainServicesStyle, {
   PlainServicesStyleHeading,
 } from '../../Components/PlainServicesStyle';
-// import image from './../../Assets/images/water_purifier.jpeg';
+// import image from './../../assets/images/water_purifier.jpeg';
 
 import Search from '../Search/Search';
 
@@ -40,12 +40,12 @@ const UC = () => {
     navigation.navigate('Location');
   };
   const handleplusmember = () => {
-    navigation.navigate('PlusMember');
+    navigation.navigate('Plus Member');
   };
   const handleReferAndEarn = () => {
-    navigation.navigate('ReferAndEarn');
+    navigation.navigate('Refer And Earn');
   };
-  const background = require('./../../Assets/videos/sample.mp4');
+  const background = require('./../../assets/videos/sample.mp4');
   return (
     <>
       <ScrollView stickyHeaderIndices={[2]}>
@@ -76,7 +76,15 @@ const UC = () => {
                   size={20}
                   style={{paddingRight: 10}}
                 />
-                <Text style={{color: 'blue', fontSize: 20}}>Plus</Text>
+                <Text
+                  style={{
+                    fontFamily: 'PlusJakartaSans-Regular',
+
+                    color: 'blue',
+                    fontSize: 20,
+                  }}>
+                  Plus
+                </Text>
               </View>
 
               <Text>Up to 15% off on all services </Text>
@@ -90,7 +98,12 @@ const UC = () => {
             <View
               style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <TouchableOpacity onPress={handleLocaion}>
-                <Text style={{color: 'black', fontWeight: '600', fontSize: 24}}>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 24,
+                    fontFamily: 'PlusJakartaSans-Bold',
+                  }}>
                   WIRF+6V4
                 </Text>
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -133,7 +146,14 @@ const UC = () => {
                   alignItems: 'center',
                 }}>
                 <FontAwesome6 name="magnifying-glass" color="black" size={25} />
-                <Text style={{paddingLeft: 20}}>Search For </Text>
+                <Text
+                  style={{
+                    fontFamily: 'PlusJakartaSans-Regular',
+
+                    paddingLeft: 20,
+                  }}>
+                  Search For{' '}
+                </Text>
                 <AnimatedText texts={texts} />
               </View>
             </TouchableOpacity>
@@ -159,7 +179,7 @@ const UC = () => {
           <View style={MyStyle.container}>
             <Text>Buy Products</Text>
             <Image
-              source={require('./../../Assets/images/new_launch.png')}
+              source={require('./../../assets/images/new_launch.png')}
               style={{
                 width: '100%',
                 height: 120,
@@ -171,11 +191,25 @@ const UC = () => {
         </View>
         <View style={{backgroundColor: 'white', marginTop: 10}}>
           <View style={[MyStyle.container]}>
-            <Text style={{color: 'blue', fontSize: 24}}>
+            <Text
+              style={{
+                color: 'blue',
+                fontSize: 24,
+                fontFamily: 'PlusJakartaSans-Bold',
+              }}>
               Thoughtful curations
             </Text>
-            <Text style={{color: 'black', fontSize: 22}}>
-              Of our finest experience
+            <Text
+              style={{
+                fontFamily: 'PlusJakartaSans-Regular',
+                color: 'black',
+                fontSize: 22,
+              }}>
+              Of our{' '}
+              <Text style={{fontFamily: 'Pacifico', fontWeight: '400'}}>
+                finest
+              </Text>{' '}
+              experience
             </Text>
             <ScrollView
               horizontal={true}
@@ -202,59 +236,57 @@ const UC = () => {
             paddingVertical: 20,
           }}>
           <View style={MyStyle.container}>
-            <Text style={{paddingBottom: 10, color: 'black', fontSize: 18}}>
-              New and noteworthy
-            </Text>
+            <PlainServicesStyleHeading heading="New and NoteWorthy" />
             <ScrollView
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
               <View>
                 <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                   sername="Native Water purifier"
                 />
                 <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                  sername="Native Water purifier"
-                />
-              </View>
-              <View>
-                <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                  sername="Native Water purifier"
-                />
-                <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                   sername="Native Water purifier"
                 />
               </View>
               <View>
                 <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                   sername="Native Water purifier"
                 />
                 <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                  sername="Native Water purifier"
-                />
-              </View>
-              <View>
-                <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                  sername="Native Water purifier"
-                />
-                <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                   sername="Native Water purifier"
                 />
               </View>
               <View>
                 <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                   sername="Native Water purifier"
                 />
                 <Two_row_style_services
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                  sername="Native Water purifier"
+                />
+              </View>
+              <View>
+                <Two_row_style_services
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                  sername="Native Water purifier"
+                />
+                <Two_row_style_services
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                  sername="Native Water purifier"
+                />
+              </View>
+              <View>
+                <Two_row_style_services
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                  sername="Native Water purifier"
+                />
+                <Two_row_style_services
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                   sername="Native Water purifier"
                 />
               </View>
@@ -263,14 +295,12 @@ const UC = () => {
         </View>
         <View style={{backgroundColor: 'white', marginVertical: 5}}>
           <View style={MyStyle.container}>
-            <Text style={{paddingBottom: 10, color: 'black', fontSize: 18}}>
-              Most Booked Services
-            </Text>
+            <PlainServicesStyleHeading heading="Most Booked Services" />
             <ScrollView
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Intense Bathroom Cleaning"
                 ratings="4.76"
                 revqty="1.2M"
@@ -278,7 +308,7 @@ const UC = () => {
                 strikedprice="₹555"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Intense Bathroom Cleaning"
                 ratings="4.76"
                 revqty="1.2M"
@@ -286,7 +316,7 @@ const UC = () => {
                 strikedprice="₹555"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Intense Bathroom Cleaning"
                 ratings="4.76"
                 revqty="1.2M"
@@ -294,7 +324,7 @@ const UC = () => {
                 strikedprice="₹555"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Intense Bathroom Cleaning"
                 ratings="4.76"
                 revqty="1.2M"
@@ -302,7 +332,7 @@ const UC = () => {
                 strikedprice="₹555"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Intense Bathroom Cleaning"
                 ratings="4.76"
                 revqty="1.2M"
@@ -310,7 +340,7 @@ const UC = () => {
                 strikedprice="₹555"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Intense Bathroom Cleaning"
                 ratings="4.76"
                 revqty="1.2M"
@@ -329,26 +359,26 @@ const UC = () => {
               style={{paddingTop: 13}}>
               <View>
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                />
-              </View>
-              <View>
-                <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                />
-                <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
               </View>
               <View>
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                />
+              </View>
+              <View>
+                <PlainServicesStyle
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                />
+                <PlainServicesStyle
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
               </View>
             </ScrollView>
@@ -358,7 +388,7 @@ const UC = () => {
           <View style={MyStyle.container}>
             <TouchableOpacity>
               <Image
-                source={require('./../../Assets/images/massage.png')}
+                source={require('./../../assets/images/massage.png')}
                 size="contain"
                 style={{
                   width: '100%',
@@ -380,16 +410,16 @@ const UC = () => {
               showsHorizontalScrollIndicator={false}
               style={{paddingTop: 13}}>
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
             </ScrollView>
           </View>
@@ -402,16 +432,16 @@ const UC = () => {
               showsHorizontalScrollIndicator={false}
               style={{paddingTop: 13}}>
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
             </ScrollView>
           </View>
@@ -420,7 +450,7 @@ const UC = () => {
           <View style={MyStyle.container}>
             <TouchableOpacity>
               <Image
-                source={require('./../../Assets/images/massage.png')}
+                source={require('./../../assets/images/massage.png')}
                 size="contain"
                 style={{
                   width: '100%',
@@ -438,42 +468,42 @@ const UC = () => {
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Drill & hand (wall decor)"
                 ratings="4.85"
                 revqty="137.4k"
                 price="129"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Cupboard hinge service (upto two)"
                 ratings="4.83"
                 revqty="64.6k"
                 price="199"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Curtain rod installation"
                 ratings="4.84"
                 revqty="48.4k"
                 price="199"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Intense Bathroom Cleaning"
                 ratings="4.76"
                 revqty="1.2M"
                 price="499"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Channel Repair (One set)"
                 ratings="4.83"
                 revqty="41.8k"
                 price="199"
               />
               <ProductStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
                 prodname="Wooden Shelf Installation"
                 ratings="4.76"
                 revqty="1.2M"
@@ -490,16 +520,16 @@ const UC = () => {
               showsHorizontalScrollIndicator={false}
               style={{paddingTop: 13}}>
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/water_purifier.jpeg')}
+                image={require('./../../assets/images/water_purifier.jpeg')}
               />
             </ScrollView>
           </View>
@@ -508,7 +538,7 @@ const UC = () => {
           <View style={MyStyle.container}>
             <TouchableOpacity>
               <Image
-                source={require('./../../Assets/images/native_water_purifier.jpg')}
+                source={require('./../../assets/images/native_water_purifier.jpg')}
                 size="contain"
                 style={{
                   width: '100%',
@@ -531,26 +561,26 @@ const UC = () => {
               style={{paddingTop: 13}}>
               <View>
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                />
-              </View>
-              <View>
-                <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
-                />
-                <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
               </View>
               <View>
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
                 <PlainServicesStyle
-                  image={require('./../../Assets/images/water_purifier.jpeg')}
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                />
+              </View>
+              <View>
+                <PlainServicesStyle
+                  image={require('./../../assets/images/water_purifier.jpeg')}
+                />
+                <PlainServicesStyle
+                  image={require('./../../assets/images/water_purifier.jpeg')}
                 />
               </View>
             </ScrollView>
@@ -558,22 +588,22 @@ const UC = () => {
         </View>
         <View style={{backgroundColor: 'white', paddingVertical: 5}}>
           <View style={MyStyle.container}>
-            <PlainServicesStyleHeading heading="massage for Men" />
+            <PlainServicesStyleHeading heading="Massage for Men" />
             <ScrollView
               horizontal={true}
               showsHorizontalScrollIndicator={false}
               style={{paddingTop: 13}}>
               <PlainServicesStyle
-                image={require('./../../Assets/images/massage.png')}
+                image={require('./../../assets/images/massage.png')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/massage.png')}
+                image={require('./../../assets/images/massage.png')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/massage.png')}
+                image={require('./../../assets/images/massage.png')}
               />
               <PlainServicesStyle
-                image={require('./../../Assets/images/massage.png')}
+                image={require('./../../assets/images/massage.png')}
               />
             </ScrollView>
           </View>
@@ -588,14 +618,20 @@ const UC = () => {
               }}
               onPress={handleReferAndEarn}>
               <View>
-                <Text style={{color: 'black', fontSize: 18}}>
+                <Text
+                  style={{
+                    fontFamily: 'PlusJakartaSans-Regular',
+
+                    color: 'black',
+                    fontSize: 18,
+                  }}>
                   Refer and get {'\n'}
                   free services
                 </Text>
                 <Text>invite and get ₹ 100*</Text>
               </View>
               <Image
-                source={require('./../../Assets/images/gift.jpg')}
+                source={require('./../../assets/images/gift.jpg')}
                 size="cover"
                 style={{
                   width: 200,

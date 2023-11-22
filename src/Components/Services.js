@@ -17,10 +17,15 @@ const Services = props => {
           }}>
           <Image
             style={{width: 75, height: 75}}
-            source={require('./../Assets/images/dummyimage.png')}
+            source={require('./../assets/images/dummyimage.png')}
           />
         </View>
-        <Text style={{textAlign: 'center', color: 'black'}}>
+        <Text
+          style={{
+            fontFamily: 'PlusJakartaSans-Regular',
+            textAlign: 'center',
+            color: 'black',
+          }}>
           {props.servicename}
         </Text>
       </TouchableOpacity>

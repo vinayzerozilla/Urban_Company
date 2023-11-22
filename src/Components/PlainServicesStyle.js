@@ -10,13 +10,24 @@ export const PlainServicesStyleHeading = props => {
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
-        <Text style={{color: 'black', fontSize: 24}}>{props.heading}</Text>
+        <Text
+          style={{
+            color: 'black',
+            fontSize: 22,
+            fontFamily: 'PlusJakartaSans-Bold',
+          }}>
+          {props.heading}
+        </Text>
 
         <TouchableOpacity>
-          <Text style={{color: 'blue'}}>See all</Text>
+          <Text style={{color: 'blue', fontFamily: 'PlusJakartaSans-Regular'}}>
+            See all
+          </Text>
         </TouchableOpacity>
       </View>
-      <Text>{props.subtitle}</Text>
+      <Text style={{fontFamily: 'PlusJakartaSans-Regular'}}>
+        {props.subtitle}
+      </Text>
     </>
   );
 };
