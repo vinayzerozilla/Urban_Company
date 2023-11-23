@@ -14,9 +14,15 @@ const Services = props => {
             padding: 15,
             borderRadius: 14,
             height: 100,
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
           }}>
           <Image
-            style={{width: 75, height: 75}}
+            style={{
+              width: 75,
+              height: 75,
+            }}
             source={require('./../assets/images/dummyimage.png')}
           />
         </View>

@@ -70,21 +70,9 @@ const UC = () => {
                   alignItems: 'center',
                   paddingHorizontal: 10,
                 }}>
-                <AntDesign
-                  name="pluscircle"
-                  color="blue"
-                  size={20}
-                  style={{paddingRight: 10}}
+                <Image
+                  source={require('./../../assets/images/plus_image.webp')}
                 />
-                <Text
-                  style={{
-                    fontFamily: 'PlusJakartaSans-Regular',
-
-                    color: 'blue',
-                    fontSize: 20,
-                  }}>
-                  Plus
-                </Text>
               </View>
 
               <Text>Up to 15% off on all services </Text>
@@ -179,7 +167,7 @@ const UC = () => {
           <View style={MyStyle.container}>
             <Text>Buy Products</Text>
             <Image
-              source={require('./../../assets/images/new_launch.png')}
+              source={require('./../../assets/images/new_launch.webp')}
               style={{
                 width: '100%',
                 height: 120,
@@ -388,7 +376,7 @@ const UC = () => {
           <View style={MyStyle.container}>
             <TouchableOpacity>
               <Image
-                source={require('./../../assets/images/massage.png')}
+                source={require('./../../assets/images/massage.webp')}
                 size="contain"
                 style={{
                   width: '100%',
@@ -450,7 +438,7 @@ const UC = () => {
           <View style={MyStyle.container}>
             <TouchableOpacity>
               <Image
-                source={require('./../../assets/images/massage.png')}
+                source={require('./../../assets/images/massage.webp')}
                 size="contain"
                 style={{
                   width: '100%',
@@ -594,16 +582,16 @@ const UC = () => {
               showsHorizontalScrollIndicator={false}
               style={{paddingTop: 13}}>
               <PlainServicesStyle
-                image={require('./../../assets/images/massage.png')}
+                image={require('./../../assets/images/massage.webp')}
               />
               <PlainServicesStyle
-                image={require('./../../assets/images/massage.png')}
+                image={require('./../../assets/images/massage.webp')}
               />
               <PlainServicesStyle
-                image={require('./../../assets/images/massage.png')}
+                image={require('./../../assets/images/massage.webp')}
               />
               <PlainServicesStyle
-                image={require('./../../assets/images/massage.png')}
+                image={require('./../../assets/images/massage.webp')}
               />
             </ScrollView>
           </View>

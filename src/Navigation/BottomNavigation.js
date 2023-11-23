@@ -4,6 +4,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import UC from '../Screens/UC/UC';
+import NativeHome from '../Screens/Native/NativeHome';
+import ProfileHome from '../Screens/Account/ProfileHome';
 
 const Tab = createBottomTabNavigator();
 const BottomNavigation = () => {
@@ -16,12 +18,7 @@ const BottomNavigation = () => {
   const Beauty = () => {
     return <Text>Beauty</Text>;
   };
-  const Native = () => {
-    return <Text>Native</Text>;
-  };
-  const Account = () => {
-    return <Text>Account</Text>;
-  };
+
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -98,7 +95,7 @@ const BottomNavigation = () => {
       />
       <Tab.Screen
         name="Native"
-        component={Native}
+        component={NativeHome}
         options={{
           tabBarLabel: 'Native',
           headerShown: false,
@@ -106,10 +103,17 @@ const BottomNavigation = () => {
       />
       <Tab.Screen
         name="Account"
-        component={Account}
+        component={ProfileHome}
         options={{
           tabBarLabel: 'Account',
-          headerShown: false,
+          title: 'My Profile',
+          headerStyle: {
+            backgroundColor: 'black',
+          },
+          headerTitleStyle: {
+            fontWeight: '500',
+            color: 'white',
+          },
         }}
       />
     </Tab.Navigator>
