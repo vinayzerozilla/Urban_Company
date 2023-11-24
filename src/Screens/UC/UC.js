@@ -33,6 +33,9 @@ const UC = () => {
   const handleSearch = () => {
     navigation.navigate('Search');
   };
+  const handleNative = () => {
+    navigation.navigate('NativeHome');
+  };
   const handlecart = () => {
     navigation.navigate('Cart');
   };
@@ -374,7 +377,7 @@ const UC = () => {
         </View>
         <View style={{backgroundColor: 'white'}}>
           <View style={MyStyle.container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleNative}>
               <Image
                 source={require('./../../assets/images/massage.webp')}
                 size="contain"
@@ -436,7 +439,7 @@ const UC = () => {
         </View>
         <View style={{backgroundColor: 'white'}}>
           <View style={MyStyle.container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleNative}>
               <Image
                 source={require('./../../assets/images/massage.webp')}
                 size="contain"
@@ -524,7 +527,7 @@ const UC = () => {
         </View>
         <View style={{backgroundColor: 'white'}}>
           <View style={MyStyle.container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleNative}>
               <Image
                 source={require('./../../assets/images/native_water_purifier.jpg')}
                 size="contain"

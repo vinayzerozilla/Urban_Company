@@ -30,34 +30,36 @@ const BottomPopup = () => {
     [],
   );
   return (
-    <View style={styles.container}>
-      <View style={styles.closeButtonContainer}>
-        <Button title="Snap To 50%" onPress={() => handleSnapPress(0)} />
+    <GestureHandlerRootView>
+      <View style={styles.container}>
+        <View style={styles.closeButtonContainer}>
+          <Button title="Snap To 50%" onPress={() => handleSnapPress(0)} />
+        </View>
+        <BottomSheet
+          ref={sheetRef}
+          snapPoints={snapPoints}
+          onChange={handleSheetChange}
+          enablePanDownToClose={true}
+          enableDynamicSizing={true}
+          backdropComponent={renderBackdrop}
+          // handleHeight={50}
+          // containerHeight={300}
+          // contentHeight={500}
+          handleIndicatorStyle={{backgroundColor: 'blue', width: '100%'}}
+          backgroundStyle={{backgroundColor: 'orange'}}
+          handleStyle={{
+            backgroundColor: 'black',
+            borderTopRightRadius: 15,
+            borderTopLeftRadius: 15,
+          }}
+          enableDynamicSizingc={true}>
+          <BottomSheetView style={styles.bottomSheetView} index={0}>
+            <Button title="Close" onPress={() => handleClosePress()} />
+            <CustomComponent />
+          </BottomSheetView>
+        </BottomSheet>
       </View>
-      <BottomSheet
-        ref={sheetRef}
-        snapPoints={snapPoints}
-        onChange={handleSheetChange}
-        enablePanDownToClose={true}
-        enableDynamicSizing={true}
-        backdropComponent={renderBackdrop}
-        handleHeight={50}
-        containerHeight={300}
-        contentHeight={500}
-        handleIndicatorStyle={{backgroundColor: 'blue', width: '100%'}}
-        backgroundStyle={{backgroundColor: 'orange'}}
-        handleStyle={{
-          backgroundColor: 'black',
-          borderTopRightRadius: 15,
-          borderTopLeftRadius: 15,
-        }}
-        enableDynamicSizingc={true}>
-        <BottomSheetView style={styles.bottomSheetView} index={-1}>
-          <Button title="Close" onPress={() => handleClosePress()} />
-          <CustomComponent />
-        </BottomSheetView>
-      </BottomSheet>
-    </View>
+    </GestureHandlerRootView>
   );
 };
 
@@ -74,11 +76,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    width: '90%',
+    width: '100%',
   },
   contentContainer: {
     flex: 1,
     alignItems: 'center',
+    width: '100%',
+    maxWidth: '100%',
   },
 });
 

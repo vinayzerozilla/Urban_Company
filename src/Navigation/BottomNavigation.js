@@ -6,6 +6,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import UC from '../Screens/UC/UC';
 import NativeHome from '../Screens/Native/NativeHome';
 import ProfileHome from '../Screens/Account/ProfileHome';
+import BeautyHome from '../Screens/Beauty/BeautyHome';
 
 const Tab = createBottomTabNavigator();
 const BottomNavigation = () => {
@@ -15,9 +16,9 @@ const BottomNavigation = () => {
   // const UC = () => {
   //   return <Text>UC</Text>;
   // };
-  const Beauty = () => {
-    return <Text>Beauty</Text>;
-  };
+  // const Beauty = () => {
+  //   return <Text>Beauty</Text>;
+  // };
 
   return (
     <Tab.Navigator
@@ -79,7 +80,7 @@ const BottomNavigation = () => {
       />
       <Tab.Screen
         name="Beauty"
-        component={Beauty}
+        component={BeautyHome}
         options={{
           tabBarLabel: 'Beauty',
           headerShown: false,

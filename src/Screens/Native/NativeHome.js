@@ -8,21 +8,17 @@ const NativeHome = () => {
   const handleSearch = () => {
     navigation.navigate('Search');
   };
+
   const texts = ["'RO'", "'Smart Lock'", "'Water Purifier'"];
   return (
     <>
-      <ScrollView>
+      <ScrollView stickyHeaderIndices={[1]}>
         <View>
-          {/* <Image
+          <Image
             source={require('./../../assets/images/native_page_image.webp')}
-            resizeMode="contain"
-            style={{
-              flex: 1,
-              width: '100%',
-              height: '100%',
-              alignItems: 'flex-start',
-            }}
-          /> */}
+            style={{height: 150, width: '100%'}}
+            resizeMode="cover"
+          />
         </View>
         <View style={{backgroundColor: 'white', paddingVertical: 10}}>
           <View style={{marginVertical: 5, marginHorizontal: 15}}>

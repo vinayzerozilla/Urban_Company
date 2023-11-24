@@ -8,6 +8,8 @@ import Location from '../Screens/Location';
 import PlusMember from '../Screens/PlusMember';
 import ReferAndEarn from '../Screens/ReferAndEarn';
 import Search from '../Screens/Search/Search';
+import EditProfile from '../Screens/Account/EditProfile';
+import NativeHome from '../Screens/Native/NativeHome';
 
 const Stack = createNativeStackNavigator();
 const scrollY = new Animated.Value(0);
@@ -45,6 +47,28 @@ const Navigation = () => {
           component={PlusMember}
           options={{
             title: 'UC Plus',
+          }}
+        />
+        <Stack.Screen
+          name="NativeHome"
+          component={NativeHome}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfile}
+          options={{
+            title: 'Edit Profile',
+            headerStyle: {
+              backgroundColor: 'black',
+            },
+            headerTitleStyle: {
+              fontWeight: '500',
+              color: 'white',
+            },
+            headerTintColor: 'white',
           }}
         />
         <Stack.Screen name="Refer And Earn" component={ReferAndEarn} />

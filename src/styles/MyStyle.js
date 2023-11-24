@@ -21,6 +21,11 @@ const MyStyle = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  sidebyside: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
   margintopwithwhitebackground: {
     marginTop: 10,
     backgroundColor: Colors.white,

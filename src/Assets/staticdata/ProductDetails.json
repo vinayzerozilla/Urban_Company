@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Haircut for men",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.88,
+    "ratingcount": 645.8,
+    "price": 249,
+    "oprice": ""
+  },
+  {
+    "id": 2,
+    "title": "Elysian British rose pedicure",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.81,
+    "ratingcount": 207.7,
+    "price": 859,
+    "oprice": ""
+  },
+  {
+    "id": 3,
+    "title": "Stress relief swedish massage",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.84,
+    "ratingcount": 99.3,
+    "price": 1299,
+    "oprice": ""
+  },
+  {
+    "id": 4,
+    "title": "Haircut for men",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.92,
+    "ratingcount": 120.2,
+    "price": 449,
+    "oprice": ""
+  },
+  {
+    "id": 5,
+    "title": "Haircut & Styling",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.83,
+    "ratingcount": 66.1,
+    "price": 749,
+    "oprice": ""
+  },
+  {
+    "id": 6,
+    "title": "Haircut for men",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.88,
+    "ratingcount": 645.8,
+    "price": 249,
+    "oprice": ""
+  },
+  {
+    "id": 7,
+    "title": "Elysian British rose pedicure",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.81,
+    "ratingcount": 207.7,
+    "price": 859,
+    "oprice": ""
+  },
+  {
+    "id": 8,
+    "title": "Stress relief swedish massage",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.84,
+    "ratingcount": 99.3,
+    "price": 1299,
+    "oprice": ""
+  },
+  {
+    "id": 9,
+    "title": "Haircut for men",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.92,
+    "ratingcount": 120.2,
+    "price": 449,
+    "oprice": ""
+  },
+  {
+    "id": 10,
+    "title": "Haircut & Styling",
+    "image": "'./../../assets/images/water_purifier.jpeg'",
+    "ratings": 4.83,
+    "ratingcount": 66.1,
+    "price": 749,
+    "oprice": ""
+  }
+]
