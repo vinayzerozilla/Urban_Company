@@ -5,7 +5,7 @@ import MyStyle from '../styles/MyStyle';
 import PlusMemberPrice from '../Components/PlusMemberPrice';
 import FAQ from '../Components/FAQ';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Colors} from '../assets/Colors';
+import {Colors} from './../assets/Colors.js';
 const PlusMember = () => {
   const [btnName, setBtnname] = useState('ADD');
   return (
@@ -18,7 +18,7 @@ const PlusMember = () => {
           }}>
           <View>
             <Image
-              source={require('./../assets/images/plus_background.webp')}
+              source={require('./../assets/images/plus_image.webp')}
               style={{height: 150, width: '100%'}}
               resizeMode="cover"
             />

@@ -1,18 +1,22 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Octicons from 'react-native-vector-icons/Octicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import UC from '../Screens/UC/UC';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import NativeHome from '../Screens/Native/NativeHome';
+import Home from '../Screens/MainHome/Home';
 import ProfileHome from '../Screens/Account/ProfileHome';
 import BeautyHome from '../Screens/Beauty/BeautyHome';
 
 const Tab = createBottomTabNavigator();
 const BottomNavigation = () => {
-  const Home = () => {
-    return <Text style={{backgroundColor: '#ffffff', padding: 30}}>Home</Text>;
-  };
+  // const Home = () => {
+  //   return <Text style={{backgroundColor: '#ffffff', padding: 30}}>Home</Text>;
+  // };
   // const UC = () => {
   //   return <Text>UC</Text>;
   // };
@@ -28,41 +32,43 @@ const BottomNavigation = () => {
         tabBarLabel: route.name,
         tabBarIcon: ({focused, color, size}) => {
           if (route.name === 'UC') {
-            return (
-              <Octicons
-                name={focused ? 'home' : 'person-fill'}
-                size={focused ? 23 : 20}
-                color={color}
+            return focused ? (
+              <Image
+                source={require('./../assets/images/uc_logo.png')}
+                style={{width: 23, height: 23}}
+              />
+            ) : (
+              <Image
+                source={require('./../assets/images/uc_logo.png')}
+                style={{width: 20, height: 20}}
               />
             );
           } else if (route.name === 'Beauty') {
             return (
-              <Octicons
-                name={focused ? 'home' : 'person-fill'}
+              <MaterialCommunityIcons
+                name={focused ? 'mirror' : 'mirror-variant'}
                 size={focused ? 23 : 20}
                 color={color}
               />
             );
           } else if (route.name === 'Homes') {
-            return (
-              <Octicons
-                name={focused ? 'tools' : 'person-fill'}
-                size={focused ? 23 : 20}
-                color={color}
-              />
+            return focused ? (
+              <Octicons name="tools" size={23} color={color} />
+            ) : (
+              <FontAwesome5 name="tools" size={23} color={color} />
             );
           } else if (route.name === 'Native') {
             return (
-              <Octicons
-                name={focused ? 'home' : 'person-fill'}
+              <FontAwesome5
+                name={focused ? 'box-open' : 'box'}
                 size={focused ? 23 : 20}
                 color={color}
               />
             );
           } else if (route.name === 'Account') {
             return (
-              <Octicons
-                name={focused ? 'home' : 'person-fill'}
+              <FontAwesome
+                name={focused ? 'user' : 'user-o'}
                 size={focused ? 23 : 20}
                 color={color}
               />
