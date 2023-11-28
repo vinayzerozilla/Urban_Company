@@ -56,7 +56,7 @@ const BeautyHome = () => {
   const handleReferAndEarn = () => {
     navigation.navigate('Refer And Earn');
   };
-  const background = require('./../../assets/videos/sample.mp4');
+
   return (
     <>
       <ScrollView stickyHeaderIndices={[2]}>

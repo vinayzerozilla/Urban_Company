@@ -7,9 +7,14 @@
 
 import React from 'react';
 import {Text} from 'react-native';
+import {NativeBaseProvider} from 'native-base';
 import Navigation from './src/Navigation/Navigation';
 function App(): JSX.Element {
-  return <Navigation />;
+  return (
+    <NativeBaseProvider>
+      <Navigation />
+    </NativeBaseProvider>
+  );
 }
 
 export default App;

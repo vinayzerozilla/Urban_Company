@@ -19,22 +19,24 @@ import AnimatedText from '../../Components/AnimatedText';
 import VideoScroll from '../../Components/VideoScroll';
 import {useNavigation} from '@react-navigation/native';
 import Services from '../../Components/Services';
+import Women from '../../Services/Women';
 import ImageCarousel from '../../Components/ImageCarousel';
+import FAQ from '../../Components/FAQ';
 import PlainServicesStyle, {
   PlainServicesStyleHeading,
 } from '../../Components/PlainServicesStyle';
-// import image from './../../assets/images/water_purifier.jpeg';
 
-import Search from '../Search/Search';
+// import image from './../../assets/images/water_purifier.jpeg';
 
 const UC = () => {
   const texts = ["'Facial'", "'Kitchen Cleaning'", "'AC Service'"];
   const navigation = useNavigation();
+
   const handleSearch = () => {
     navigation.navigate('Search');
   };
   const handleNative = () => {
-    navigation.navigate('NativeHome');
+    navigation.navigate('BottomNavigation', {screen: 'Native'});
   };
   const handlecart = () => {
     navigation.navigate('Cart');
@@ -48,7 +50,7 @@ const UC = () => {
   const handleReferAndEarn = () => {
     navigation.navigate('Refer And Earn');
   };
-  const background = require('./../../assets/videos/sample.mp4');
+  const background = require('./../../assets/videos/sample.webm');
   return (
     <>
       <ScrollView stickyHeaderIndices={[2]}>
@@ -159,25 +161,53 @@ const UC = () => {
             justifyContent: 'center',
             paddingTop: 20,
           }}>
-          <Services servicename="Women's Salon, Spa & Laser Clinic" />
-          <Services servicename="Men's Salon and Massage" />
-          <Services servicename="AC & Appliance Repair" />
-          <Services servicename="Cleaning & Pest Control" />
-          <Services servicename="Electrician Plumber & Carpenter" />
-          <Services servicename="painting and WaterProofing" />
+          {/* <Actionsheet isOpen={isOpen} onClose={onClose}>
+            <Actionsheet.Content custoncontent={<FAQ />}>
+              <Services
+                servicename="Women's Salon, Spa & Laser Clinic"
+                touch={onOpen}
+              />
+            </Actionsheet.Content>
+          </Actionsheet> */}
+          <Services
+            servicename="Women's Salon, Spa & Laser Clinic"
+            customcontent={<Women />}
+          />
+          <Services
+            servicename="Men's Salon and Massage"
+            customcontent={<Women />}
+          />
+          <Services
+            servicename="AC & Appliance Repair"
+            customcontent={<Women />}
+          />
+          <Services
+            servicename="Cleaning & Pest Control"
+            customcontent={<Women />}
+          />
+          <Services
+            servicename="Electrician Plumber & Carpenter"
+            customcontent={<Women />}
+          />
+          <Services
+            servicename="painting and WaterProofing"
+            customcontent={<Women />}
+          />
         </View>
         <View style={{paddingVertical: 10, backgroundColor: 'white'}}>
           <View style={MyStyle.container}>
             <Text>Buy Products</Text>
-            <Image
-              source={require('./../../assets/images/new_launch.webp')}
-              style={{
-                width: '100%',
-                height: 120,
-                resizeMode: 'contain',
-                flex: 0,
-              }}
-            />
+            <TouchableOpacity onPress={handleNative}>
+              <Image
+                source={require('./../../assets/images/new_launch.webp')}
+                style={{
+                  width: '100%',
+                  height: 120,
+                  resizeMode: 'contain',
+                  flex: 0,
+                }}
+              />
+            </TouchableOpacity>
           </View>
         </View>
         <View style={{backgroundColor: 'white', marginTop: 10}}>
