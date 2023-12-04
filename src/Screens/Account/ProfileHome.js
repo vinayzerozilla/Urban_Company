@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Text, ScrollView, TouchableOpacity, Linking} from 'react-native';
 import MyStyle from '../../styles/MyStyle';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
@@ -7,11 +7,37 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Share} from 'react-native';
 import {Colors} from '../../assets/Colors';
 const ProfileHome = () => {
   const navigation = useNavigation();
   const EditProfile = () => {
     navigation.navigate('EditProfile');
+  };
+  const helpcenter = () => {
+    navigation.navigate('helpcenter');
+  };
+  const manageaddress = () => {
+    navigation.navigate('ManageAddress');
+  };
+  const mybookings = () => {
+    navigation.navigate('MyBookings');
+  };
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+          'Please download the ZZ company app here, https://www.google.com/maps',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+        } else {
+        }
+      } else if (result.action === Share.dismissedAction) {
+      }
+    } catch (error) {
+      Alert.alert(error.message);
+    }
   };
   return (
     <ScrollView>
@@ -45,7 +71,7 @@ const ProfileHome = () => {
             borderBottomColor: 'gray',
             borderBottomWidth: 1,
           }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={helpcenter}>
             <View
               style={[
                 MyStyle.sidebyside,
@@ -88,7 +114,7 @@ const ProfileHome = () => {
             borderBottomColor: 'gray',
             borderBottomWidth: 1,
           }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={manageaddress}>
             <View
               style={[
                 MyStyle.sidebyside,
@@ -112,7 +138,7 @@ const ProfileHome = () => {
             borderBottomColor: 'gray',
             borderBottomWidth: 1,
           }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={mybookings}>
             <View
               style={[
                 MyStyle.sidebyside,
@@ -126,7 +152,16 @@ const ProfileHome = () => {
             </View>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={async () => {
+            try {
+              await Linking.openURL(
+                'market://details?id=com.urbanclap.urbanclap',
+              );
+            } catch (error) {
+              console.error('Failed to open Play Store:', error);
+            }
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -146,7 +181,10 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AboutUC');
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -166,7 +204,7 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onShare}>
           <View
             style={{
               paddingVertical: 5,
@@ -186,7 +224,10 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Refer And Earn');
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -206,7 +247,10 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('MyRating');
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -226,7 +270,10 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('MyWallet');
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -246,7 +293,10 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('ScheduledBookings');
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -266,7 +316,16 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={async () => {
+            try {
+              await Linking.openURL(
+                'market://details?id=com.urbanclap.urbanclap',
+              );
+            } catch (error) {
+              console.error('Failed to open Play Store:', error);
+            }
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -286,7 +345,10 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('PaymentOptions');
+          }}>
           <View
             style={{
               paddingVertical: 5,
@@ -306,7 +368,10 @@ const ProfileHome = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Settings');
+          }}>
           <View
             style={{
               paddingVertical: 5,

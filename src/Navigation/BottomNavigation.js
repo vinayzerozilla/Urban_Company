@@ -31,7 +31,7 @@ const BottomNavigation = () => {
         tabBarInactiveTintColor: 'gray',
         tabBarLabel: route.name,
         tabBarIcon: ({focused, color, size}) => {
-          if (route.name === 'UC') {
+          if (route.name === 'ZZ') {
             return focused ? (
               <Image
                 source={require('./../assets/images/uc_logo.png')}
@@ -77,10 +77,10 @@ const BottomNavigation = () => {
         },
       })}>
       <Tab.Screen
-        name="UC"
+        name="ZZ"
         component={UC}
         options={{
-          tabBarLabel: 'UC',
+          tabBarLabel: 'ZZ',
           headerShown: false,
         }}
       />

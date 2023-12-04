@@ -16,7 +16,7 @@ import Two_row_style_services from '../../Components/Two_row_style_services';
 import ProductStyle from '../../Components/ProductStyle';
 import AnimatedText from '../../Components/AnimatedText';
 import {useNavigation} from '@react-navigation/native';
-import Services from '../../Components/Services';
+import ServiceWOBtmsht from '../../Components/ServiceWOBtmsht';
 import PlainServicesStyle, {
   PlainServicesStyleHeading,
 } from '../../Components/PlainServicesStyle';
@@ -146,12 +146,30 @@ const BeautyHome = () => {
             justifyContent: 'center',
             paddingTop: 20,
           }}>
-          <Services servicename="Salon for women" />
-          <Services servicename="Spa for Women" />
-          <Services servicename="Hair Studio for women" />
-          <Services servicename="Nail Studios for women" />
-          <Services servicename="makeup & styling studio" />
-          <Services servicename="Laser hair reduction" />
+          <ServiceWOBtmsht
+            servicename="Salon for women"
+            navigationpage="Plus Member"
+          />
+          <ServiceWOBtmsht
+            servicename="Spa for Women"
+            navigationpage="Plus Member"
+          />
+          <ServiceWOBtmsht
+            servicename="Hair Studio for women"
+            navigationpage="Plus Member"
+          />
+          <ServiceWOBtmsht
+            servicename="Nail Studios for women"
+            navigationpage="Plus Member"
+          />
+          <ServiceWOBtmsht
+            servicename="makeup & styling studio"
+            navigationpage="Plus Member"
+          />
+          <ServiceWOBtmsht
+            servicename="Laser hair reduction"
+            navigationpage="Plus Member"
+          />
         </View>
         <View style={{backgroundColor: 'white'}}>
           <View style={MyStyle.container}>

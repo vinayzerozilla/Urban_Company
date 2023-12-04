@@ -36,7 +36,7 @@ const Home = () => {
     setProductDetails(productdetails);
     setServiceImages(serviceimage);
   }, []);
-  const texts = ["'Facial'", "'Kitchen Cleaning'", "'AC Service'"];
+  const texts = ["'Microwave Repair'", "'AC Repair'", "'Electricians'"];
   const navigation = useNavigation();
   const handleSearch = () => {
     navigation.navigate('Search');

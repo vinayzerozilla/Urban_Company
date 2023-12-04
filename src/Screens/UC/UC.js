@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Text,
   View,
@@ -10,7 +10,7 @@ import {
 import MyStyle from '../../styles/MyStyle';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
-import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Badge} from 'react-native-paper';
 import Two_row_style_services from '../../Components/Two_row_style_services';
 import ProductStyle from '../../Components/ProductStyle';
@@ -21,15 +21,20 @@ import {useNavigation} from '@react-navigation/native';
 import Services from '../../Components/Services';
 import Women from '../../Services/Women';
 import ImageCarousel from '../../Components/ImageCarousel';
+import productdetails from './../../assets/staticdata/ProductDetails.json';
+import serviceimage from './../../assets/staticdata/serviceimage.json';
 import FAQ from '../../Components/FAQ';
 import PlainServicesStyle, {
   PlainServicesStyleHeading,
 } from '../../Components/PlainServicesStyle';
 
-// import image from './../../assets/images/water_purifier.jpeg';
-
 const UC = () => {
   const texts = ["'Facial'", "'Kitchen Cleaning'", "'AC Service'"];
+  const [showStories, setShowStories] = useState(false);
+  const [productDetails, setProductDetails] = useState([]);
+  useEffect(() => {
+    setProductDetails(productdetails);
+  }, []);
   const navigation = useNavigation();
 
   const handleSearch = () => {
@@ -49,6 +54,9 @@ const UC = () => {
   };
   const handleReferAndEarn = () => {
     navigation.navigate('Refer And Earn');
+  };
+  const handlevideo = () => {
+    setShowStories(true);
   };
   const background = require('./../../assets/videos/sample.webm');
   return (
@@ -126,19 +134,31 @@ const UC = () => {
           </View>
         </View>
         <View style={{backgroundColor: 'white', paddingVertical: 10}}>
-          <View style={{marginVertical: 5, marginHorizontal: 15}}>
+          <View
+            style={{
+              marginVertical: 5,
+              marginHorizontal: 15,
+              overflow: 'hidden',
+            }}>
             <TouchableOpacity onPress={handleSearch}>
               <View
                 style={{
                   height: 50,
                   borderColor: 'gray',
                   borderWidth: 1,
-                  elevation: 1,
+                  elevation: 2,
+                  shadowOffset: {width: 5, height: 5},
                   padding: 10,
                   flexDirection: 'row',
+                  shadowRadius: 8,
                   alignItems: 'center',
                 }}>
-                <FontAwesome6 name="magnifying-glass" color="black" size={25} />
+                <Ionicons
+                  name="search"
+                  color="gray"
+                  size={30}
+                  style={{fontWeight: '300'}}
+                />
                 <Text
                   style={{
                     fontFamily: 'PlusJakartaSans-Regular',
@@ -236,18 +256,56 @@ const UC = () => {
               horizontal={true}
               showsHorizontalScrollIndicator={false}
               style={{marginVertical: 20}}>
-              <VideoScroll video={background} />
-              <VideoScroll video={background} />
-              <VideoScroll video={background} />
-              <VideoScroll video={background} />
-              <VideoScroll video={background} />
-              <VideoScroll video={background} />
+              <VideoScroll video={background} press={handlevideo} />
+              <VideoScroll video={background} press={handlevideo} />
+              <VideoScroll video={background} press={handlevideo} />
+              <VideoScroll video={background} press={handlevideo} />
+              <VideoScroll video={background} press={handlevideo} />
+              <VideoScroll video={background} press={handlevideo} />
             </ScrollView>
           </View>
         </View>
-        <View style={{backgroundColor: 'white', marginVertical: 10}}>
-          <View style={MyStyle.container}>
-            <ImageCarousel />
+        <View style={{backgroundColor: 'white', marginTop: 10}}>
+          <View style={[MyStyle.container]}>
+            <ScrollView horizontal={true} style={{marginVertical: 20}}>
+              <TouchableOpacity>
+                <Image
+                  source={require('./../../assets/images/slider1.webp')}
+                  style={{marginHorizontal: 10, borderRadius: 12}}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Image
+                  source={require('./../../assets/images/slider2.webp')}
+                  style={{marginHorizontal: 10, borderRadius: 12}}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  source={require('./../../assets/images/slider3.webp')}
+                  style={{marginHorizontal: 10, borderRadius: 12}}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  source={require('./../../assets/images/slider4.webp')}
+                  style={{marginHorizontal: 10, borderRadius: 12}}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  source={require('./../../assets/images/slider5.webp')}
+                  style={{marginHorizontal: 10, borderRadius: 12}}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  source={require('./../../assets/images/slider6.webp')}
+                  style={{marginHorizontal: 10, borderRadius: 12}}
+                />
+              </TouchableOpacity>
+            </ScrollView>
           </View>
         </View>
         <View
@@ -320,54 +378,20 @@ const UC = () => {
             <ScrollView
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Intense Bathroom Cleaning"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-                strikedprice="₹555"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Intense Bathroom Cleaning"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-                strikedprice="₹555"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Intense Bathroom Cleaning"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-                strikedprice="₹555"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Intense Bathroom Cleaning"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-                strikedprice="₹555"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Intense Bathroom Cleaning"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-                strikedprice="₹555"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Intense Bathroom Cleaning"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-                strikedprice="₹555"
-              />
+              {productDetails &&
+                productDetails.map(values => {
+                  return (
+                    <View key={values.id}>
+                      <ProductStyle
+                        image={require('./../../assets/images/water_purifier.jpeg')}
+                        prodname={values.title}
+                        ratings={values.ratings}
+                        revqty={values.ratingcount}
+                        price={values.price}
+                      />
+                    </View>
+                  );
+                })}
             </ScrollView>
           </View>
         </View>
@@ -484,52 +508,24 @@ const UC = () => {
         </View>
         <View style={{backgroundColor: 'white', marginVertical: 5}}>
           <View style={MyStyle.container}>
-            <PlainServicesStyleHeading heading="Quick Home Repairs" />
+            <PlainServicesStyleHeading heading="Most Booked Services" />
             <ScrollView
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Drill & hand (wall decor)"
-                ratings="4.85"
-                revqty="137.4k"
-                price="129"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Cupboard hinge service (upto two)"
-                ratings="4.83"
-                revqty="64.6k"
-                price="199"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Curtain rod installation"
-                ratings="4.84"
-                revqty="48.4k"
-                price="199"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Intense Bathroom Cleaning"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Channel Repair (One set)"
-                ratings="4.83"
-                revqty="41.8k"
-                price="199"
-              />
-              <ProductStyle
-                image={require('./../../assets/images/water_purifier.jpeg')}
-                prodname="Wooden Shelf Installation"
-                ratings="4.76"
-                revqty="1.2M"
-                price="499"
-              />
+              {productDetails &&
+                productDetails.map(values => {
+                  return (
+                    <View key={values.id}>
+                      <ProductStyle
+                        image={require('./../../assets/images/water_purifier.jpeg')}
+                        prodname={values.title}
+                        ratings={values.ratings}
+                        revqty={values.ratingcount}
+                        price={values.price}
+                      />
+                    </View>
+                  );
+                })}
             </ScrollView>
           </View>
         </View>
@@ -641,8 +637,7 @@ const UC = () => {
               <View>
                 <Text
                   style={{
-                    fontFamily: 'PlusJakartaSans-Regular',
-
+                    fontFamily: 'PlusJakartaSans-bold',
                     color: 'black',
                     fontSize: 18,
                   }}>

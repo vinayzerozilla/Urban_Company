@@ -17,13 +17,6 @@ const PlusMember = () => {
             backgroundColor: 'white',
           }}>
           <View>
-            <Image
-              source={require('./../assets/images/plus_image.webp')}
-              style={{height: 150, width: '100%'}}
-              resizeMode="cover"
-            />
-          </View>
-          <View>
             <View
               style={{
                 flexDirection: 'row',

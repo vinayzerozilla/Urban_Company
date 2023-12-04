@@ -12,19 +12,16 @@ const Services = props => {
         <View
           style={{
             backgroundColor: '#D3D3D3',
-            padding: 15,
+            padding: 10,
             borderRadius: 14,
-            height: 100,
+            height: 70,
             flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
           }}>
           <Image
-            style={{
-              width: 75,
-              height: 75,
-            }}
-            source={require('./../assets/images/dummyimage.png')}
+            style={{height: 50, width: 70}}
+            source={require('./../assets/images/women_spa.webp')}
           />
         </View>
         <Text

@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Video, {VideoRef} from 'react-native-video';
 
 const VideoScroll = props => {
@@ -7,14 +7,16 @@ const VideoScroll = props => {
 
   return (
     <View>
-      <Video
-        source={props.video}
-        resizeMode="contain"
-        repeat={true}
-        ref={videoRef}
-        style={styles.backgroundVideo}
-        muted={true}
-      />
+      <TouchableOpacity onPress={props.press}>
+        <Video
+          source={props.video}
+          resizeMode="contain"
+          repeat={true}
+          ref={videoRef}
+          style={styles.backgroundVideo}
+          muted={true}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
